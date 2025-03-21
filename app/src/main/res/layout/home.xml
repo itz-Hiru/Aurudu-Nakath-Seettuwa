@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#FFBE45"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/sun_image"
+        android:contentDescription="@string/sun_image_description"
+        android:src="@drawable/sun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_title"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_01"
+            android:text="@string/main_header_text01"
+            android:textColor="#191919"
+            android:fontFamily="@font/un_disapamok"
+            android:textSize="90sp"
+            android:layout_marginStart="140dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_02"
+            android:layout_below="@id/text_01"
+            android:text="@string/main_header_text02"
+            android:textColor="#191919"
+            android:fontFamily="@font/un_disapamok"
+            android:textSize="90sp"
+            android:layout_marginTop="-55dp"
+            android:layout_marginStart="200dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_03"
+            android:layout_below="@id/text_02"
+            android:text="@string/main_header_text03"
+            android:textColor="#191919"
+            android:fontFamily="@font/un_disapamok"
+            android:textSize="180sp"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-85dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sinhala_btn"
+        android:layout_below="@id/header_title"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sinhala_btn_text"
+            android:textColor="#191919"
+            android:textSize="25sp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tamil_btn"
+        android:layout_below="@id/sinhala_btn"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tamil_btn_text"
+            android:textColor="#191919"
+            android:textSize="25sp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

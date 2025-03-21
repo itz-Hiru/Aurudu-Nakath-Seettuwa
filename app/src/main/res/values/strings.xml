@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Aurudu Nakath Seettuwa</string>
+    <string name="sun_image_description">Sun image</string>
+    <string name="main_header_text03">නැකැත්</string>
+    <string name="main_header_text02">අවුරුදු</string>
+    <string name="main_header_text01">අපේ</string>
+    <string name="sinhala_btn_text">සිංහල</string>
+    <string name="tamil_btn_text">தமிழ்</string>
 </resources>
