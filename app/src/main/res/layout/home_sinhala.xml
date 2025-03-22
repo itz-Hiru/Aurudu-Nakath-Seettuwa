@@ -2,6 +2,294 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/sinhala_layout"
     android:background="#FFBE45">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header"
+            android:background="#FFCD71">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sinhala_header"
+                android:fontFamily="@font/un_disapamok"
+                android:textSize="65sp"
+                android:textColor="#191919"
+                android:padding="15dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:background="@drawable/scrollview_corners"
+            android:padding="10dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_01"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha01_header"
+                        android:text="@string/nakatha01_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha01_description"
+                        android:layout_below="@id/nakatha01_header"
+                        android:text="@string/nakatha01_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_02"
+                    android:layout_below="@id/nakatha_01"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha02_header"
+                        android:text="@string/nakatha02_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha02_description"
+                        android:layout_below="@id/nakatha02_header"
+                        android:text="@string/nakatha02_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_03"
+                    android:layout_below="@id/nakatha_02"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha03_header"
+                        android:text="@string/nakatha03_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha03_description"
+                        android:layout_below="@id/nakatha03_header"
+                        android:text="@string/nakatha03_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_04"
+                    android:layout_below="@id/nakatha_03"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha04_header"
+                        android:text="@string/nakatha04_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha04_description"
+                        android:layout_below="@id/nakatha04_header"
+                        android:text="@string/nakatha04_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_05"
+                    android:layout_below="@id/nakatha_04"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha05_header"
+                        android:text="@string/nakatha05_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha05_description"
+                        android:layout_below="@id/nakatha05_header"
+                        android:text="@string/nakatha05_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_06"
+                    android:layout_below="@id/nakatha_05"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha06_header"
+                        android:text="@string/nakatha06_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha06_description"
+                        android:layout_below="@id/nakatha06_header"
+                        android:text="@string/nakatha06_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_07"
+                    android:layout_below="@id/nakatha_06"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha07_header"
+                        android:text="@string/nakatha07_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha07_description"
+                        android:layout_below="@id/nakatha07_header"
+                        android:text="@string/nakatha07_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nakatha_08"
+                    android:layout_below="@id/nakatha_07"
+                    android:background="@drawable/nakatha_corners"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha08_header"
+                        android:text="@string/nakatha08_header"
+                        android:fontFamily="@font/un_indeewaree"
+                        android:textSize="35sp"
+                        android:textColor="#191919" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/nakatha08_description"
+                        android:layout_below="@id/nakatha08_header"
+                        android:text="@string/nakatha08_description"
+                        android:fontFamily="@font/un_ganganee"
+                        android:textSize="20sp"
+                        android:textColor="#191919"
+                        android:layout_marginTop="5dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
 
 </RelativeLayout>
