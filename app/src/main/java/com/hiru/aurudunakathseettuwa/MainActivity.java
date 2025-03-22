@@ -1,5 +1,6 @@
 package com.hiru.aurudunakathseettuwa;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RelativeLayout;
 
@@ -26,7 +27,14 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout sinhalaBtn = findViewById(R.id.sinhala_btn);
         RelativeLayout tamilBtn = findViewById(R.id.tamil_btn);
 
-        sinhalaBtn.setOnClickListener(v -> setContentView(R.layout.home_sinhala));
-        tamilBtn.setOnClickListener(v -> setContentView(R.layout.home_tamil));
+        sinhalaBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HomeSinhalaActivity.class);
+            startActivity(intent);
+        });
+
+        tamilBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, HomeTamilActivity.class);
+            startActivity(intent);
+        });
     }
 }
