@@ -28,10 +28,157 @@
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_for_next"
+            android:layout_below="@id/header"
+            android:background="@drawable/scrollview_corners"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nakatha_next"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_nakatha"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="35sp"
+                    android:textColor="#191919"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/find_next_nakatha"
+                    android:text="@string/nakatha01_header"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="35sp"
+                    android:textColor="#191919"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/time_left"
+                android:layout_below="@id/nakatha_next"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/days"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="30sp"
+                    android:textColor="#191919" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/days_left"
+                    android:background="@drawable/nakatha_corners"
+                    android:text="00"
+                    android:textSize="25sp"
+                    android:textColor="#191919"
+                    android:padding="2dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hours"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="30sp"
+                    android:textColor="#191919"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hours_left"
+                    android:background="@drawable/nakatha_corners"
+                    android:text="00"
+                    android:textSize="25sp"
+                    android:textColor="#191919"
+                    android:padding="2dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minutes"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="30sp"
+                    android:textColor="#191919"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minutes_left"
+                    android:background="@drawable/nakatha_corners"
+                    android:text="00"
+                    android:textSize="25sp"
+                    android:textColor="#191919"
+                    android:padding="2dp"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seconds"
+                    android:fontFamily="@font/un_indeewaree"
+                    android:textSize="30sp"
+                    android:textColor="#191919"
+                    android:layout_marginStart="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seconds_left"
+                    android:background="@drawable/nakatha_corners"
+                    android:text="00"
+                    android:textSize="25sp"
+                    android:textColor="#191919"
+                    android:padding="2dp"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nakatha_description"
+                android:layout_below="@id/time_left"
+                android:text="@string/nakatha01_description"
+                android:fontFamily="@font/un_gurulugomi"
+                android:textSize="30sp"
+                android:textColor="#191919"
+                android:layout_marginTop="15dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:id="@+id/clip_art"
+            android:layout_below="@id/time_for_next"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/clip_art"
+            android:contentDescription="@string/clip_art"
+            android:layout_marginTop="15dp"/>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/header"
+            android:layout_below="@id/clip_art"
             android:background="@drawable/scrollview_corners"
             android:padding="10dp"
             android:layout_marginTop="15dp">

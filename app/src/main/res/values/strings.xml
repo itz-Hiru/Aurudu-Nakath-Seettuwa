@@ -24,4 +24,10 @@
     <string name="nakatha07_description">අප්‍රේල් මස 16 වැනි බදාදා පූර්වභාග 09.04ට පච්ච වර්ණ හෙවත් කොළ පැහැති වස්ත්‍රාභරණයෙන් සැරසී උතුරු දිශාව බලා හිසට කොහොඹ පත් ද, පයට කොළොන් පත් ද තබා කොහොඹ පත් යුෂ මිශ්‍ර නානු හා තෙල් ගා ස්නානය කිරීම මැනවි.</string>
     <string name="nakatha08_header">රැකී රක්ෂා සදහා පිටත්ව යාම</string>
     <string name="nakatha08_description">අප්‍රේල් මස 17 වැනි බ්‍රහස්පතින්දා පූර්වභාග 09.03ට රන්වන් පැහැති වස්ත්‍රාභරණයෙන් සැරසී කිරිබතක් හා එළකිරි මිශ්‍ර කැවිලි වර්ගයක් අනුභව කර උතුරු දිශාව බලා පිටත්ව යෑම මැනවි.</string>
+    <string name="next_nakatha">මීලග නැකත :</string>
+    <string name="days">දින</string>
+    <string name="hours">පැය</string>
+    <string name="minutes">මිනි</string>
+    <string name="seconds">තත්</string>
+    <string name="clip_art">Clip art</string>
 </resources>
