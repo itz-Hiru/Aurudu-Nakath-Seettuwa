@@ -30,4 +30,6 @@
     <string name="minutes">මිනි</string>
     <string name="seconds">තත්</string>
     <string name="clip_art">Clip art</string>
+    <string name="no_more_nakathas">නැකත් ඉවරයි</string>
+    <string name="default_nakatha_description">2026 දි නැවත හමුවෙමු.</string>
 </resources>
