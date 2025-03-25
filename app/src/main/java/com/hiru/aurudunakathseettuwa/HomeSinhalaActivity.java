@@ -1,5 +1,6 @@
 package com.hiru.aurudunakathseettuwa;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -29,15 +30,15 @@ public class HomeSinhalaActivity extends AppCompatActivity {
     private int currentEventIndex = 0;
 
     private final String[] eventDates = {
-            "2025.03.25 16:18",
-            "2025.04.13 00:00",
+            "2025.03.30 19:00",
+            "2025.04.13 12:00",
             "2025.04.13 20:57",
             "2025.04.14 03:21",
             "2025.04.14 04:04",
             "2025.04.14 06:44",
             "2025.04.16 09:04",
             "2025.04.17 09:03",
-            "2025.05.01 00:00"
+            "2025.05.01 19:00"
     };
 
     private final int[] nakathaNames = {
@@ -159,6 +160,7 @@ public class HomeSinhalaActivity extends AppCompatActivity {
         nakathaDescriptionText.setText(getString(nakathaDescriptions[index]));
     }
 
+    @SuppressLint("DefaultLocale")
     private void updateCountdownUI(long days, long hours, long minutes, long seconds) {
         daysLeftText.setText(String.valueOf(days));
         hoursLeftText.setText(String.format("%02d", hours));
