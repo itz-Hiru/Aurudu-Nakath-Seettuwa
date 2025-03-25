@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,8 +26,16 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".alarm.AlarmReceiver" android:exported="false"/>
+
         <activity android:name=".HomeSinhalaActivity" />
         <activity android:name=".HomeTamilActivity" />
+
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"/>
     </application>
 
 </manifest>

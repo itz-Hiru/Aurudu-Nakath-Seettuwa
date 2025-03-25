@@ -1,5 +1,9 @@
 package com.hiru.aurudunakathseettuwa;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import androidx.activity.EdgeToEdge;
@@ -9,6 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.view.View;
 import android.widget.TextView;
+
+import com.hiru.aurudunakathseettuwa.alarm.AlarmReceiver;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,7 +29,7 @@ public class HomeSinhalaActivity extends AppCompatActivity {
     private int currentEventIndex = 0;
 
     private final String[] eventDates = {
-            "2025.03.30 00:00",
+            "2025.03.25 16:18",
             "2025.04.13 00:00",
             "2025.04.13 20:57",
             "2025.04.14 03:21",
@@ -123,6 +130,12 @@ public class HomeSinhalaActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 updateCountdownUI(0, 0, 0, 0);
+
+                String eventName = getString(nakathaNames[currentEventIndex]);
+                String eventDescription = getString(nakathaDescriptions[currentEventIndex]);
+
+                scheduleAlarm(eventDates[currentEventIndex], eventName, eventDescription);
+
                 currentEventIndex++;
                 startNextCountdown();
             }
@@ -139,6 +152,41 @@ public class HomeSinhalaActivity extends AppCompatActivity {
         hoursLeftText.setText(String.format("%02d", hours));
         minutesLeftText.setText(String.format("%02d", minutes));
         secondsLeftText.setText(String.format("%02d", seconds));
+    }
+
+    private void scheduleAlarm(String eventDate, String eventName, String eventDescription) {
+        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        if (alarmManager == null) return;
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+            if (!alarmManager.canScheduleExactAlarms()) {
+                Intent intent = new Intent(android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                startActivity(intent);
+                return;
+            }
+        }
+
+        Intent intent = new Intent(this, AlarmReceiver.class);
+        intent.putExtra("EVENT_NAME", eventName);
+        intent.putExtra("EVENT_DESCRIPTION", eventDescription);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                this, currentEventIndex, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
+
+        try {
+            Date date = dateFormat.parse(eventDate);
+            if (date != null) {
+                long alarmTime = date.getTime();
+                alarmManager.setExact(AlarmManager.RTC_WAKEUP, alarmTime, pendingIntent);
+
+                new android.os.Handler().postDelayed(() -> {
+                    alarmManager.cancel(pendingIntent);
+                }, 60000);
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
