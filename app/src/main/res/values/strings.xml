@@ -57,4 +57,10 @@
     <string name="default_nakatha_description_t">மீண்டும் 2026-யில் சந்திப்போம்.</string>
     <string name="alarm_stop_text">Stop Alarm</string>
     <string name="event_image">Event image</string>
+    <string name="about_button">About button</string>
+    <string name="about_image">About image</string>
+    <string name="about_header">අවුරුදු නැකත් සීට්ටුව</string>
+    <string name="version">Version 1.0.0.1</string>
+    <string name="copyright">© 2024–2025 itz Hiru</string>
+    <string name="github_account">Visit creator Github</string>
 </resources>

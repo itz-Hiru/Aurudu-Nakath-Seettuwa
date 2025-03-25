@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFBE45">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:text="@string/about_header"
+        android:fontFamily="@font/un_bindumathi"
+        android:textSize="25sp"
+        android:textColor="#191919"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/version"
+        android:layout_below="@id/header"
+        android:text="@string/version"
+        android:textColor="#303030"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/about_image"
+        android:layout_below="@id/version"
+        android:contentDescription="@string/about_image"
+        android:src="@drawable/sun"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/copyright"
+        android:layout_below="@id/about_image"
+        android:text="@string/copyright"
+        android:textColor="#303030"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/github_btn"
+        android:layout_below="@id/copyright"
+        android:background="@drawable/btn_background"
+        android:text="@string/github_account"
+        android:textColor="#303030"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
