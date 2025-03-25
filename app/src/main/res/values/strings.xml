@@ -55,4 +55,6 @@
     <string name="nakatha08_description_t">ஏப்ரல் 17 வியாழக்கிழமை காலை 09.03 மணிக்கு, தங்க ஆடைகளை அணிந்து, பாலும் பசும்பாலும் கலந்த மிட்டாயை சாப்பிட்டுவிட்டு வடக்கு திசைக்கு புறப்படுங்கள்.</string>
     <string name="no_more_nakathas_t"> </string>
     <string name="default_nakatha_description_t">மீண்டும் 2026-யில் சந்திப்போம்.</string>
+    <string name="alarm_stop_text">Stop Alarm</string>
+    <string name="event_image">Event image</string>
 </resources>

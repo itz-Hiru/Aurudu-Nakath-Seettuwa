@@ -64,6 +64,18 @@ public class HomeSinhalaActivity extends AppCompatActivity {
             R.string.nakatha01_description
     };
 
+    private final int[] nakathaImages = {
+            R.drawable.nakatha_01_img,
+            R.drawable.nakatha_02_img,
+            R.drawable.nakatha_04_img,
+            R.drawable.nakatha_03_img,
+            R.drawable.nakatha_05_img,
+            R.drawable.nakatha_06_img,
+            R.drawable.nakatha_07_img,
+            R.drawable.nakatha_08_img,
+            R.drawable.nakatha_01_img
+    };
+
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm", Locale.getDefault());
 
     @Override
@@ -134,7 +146,7 @@ public class HomeSinhalaActivity extends AppCompatActivity {
                 String eventName = getString(nakathaNames[currentEventIndex]);
                 String eventDescription = getString(nakathaDescriptions[currentEventIndex]);
 
-                scheduleAlarm(eventDates[currentEventIndex], eventName, eventDescription);
+                scheduleAlarm(eventDates[currentEventIndex], eventName, eventDescription, nakathaImages[currentEventIndex]);
 
                 currentEventIndex++;
                 startNextCountdown();
@@ -154,7 +166,7 @@ public class HomeSinhalaActivity extends AppCompatActivity {
         secondsLeftText.setText(String.format("%02d", seconds));
     }
 
-    private void scheduleAlarm(String eventDate, String eventName, String eventDescription) {
+    private void scheduleAlarm(String eventDate, String eventName, String eventDescription, int eventImage) {
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         if (alarmManager == null) return;
 
@@ -169,6 +181,7 @@ public class HomeSinhalaActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AlarmReceiver.class);
         intent.putExtra("EVENT_NAME", eventName);
         intent.putExtra("EVENT_DESCRIPTION", eventDescription);
+        intent.putExtra("EVENT_IMAGE", eventImage);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 this, currentEventIndex, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
